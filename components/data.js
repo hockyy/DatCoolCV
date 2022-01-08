@@ -1,8 +1,8 @@
 const data = {
   "info": {
-    "first_name":"",
-    "bolded_name": "Hocky",
-    "last_name": " Yudhiono",
+    "firstName":"",
+    "boldedName": "Hocky",
+    "lastName": " Yudhiono",
     "caption":"Software Engineer",
     "website": "https://hockyy.com",
     "bolded": 0,
@@ -14,10 +14,10 @@ const data = {
   "education": [{
     "name": "Universitas Indonesia",
     "location": "Depok, Indonesia",
-    "start_period": "July 2019",
-    "end_period": "January 2023",
+    "startPeriod": "July 2019",
+    "endPeriod": "January 2023",
     "gpa": 4.0,
-    "max_gpa": 4.0,
+    "maxGpa": 4.0,
     "description": "Candidate for bachelor's degree in Computer Science",
     "items": [
       "Member on one of the 2019, 2020, and 2021 ICPC core teams.",
@@ -29,8 +29,8 @@ const data = {
     "name": "Money Forward, Inc.",
     "location": "Tokyo, Japan",
     "position": "Backend Engineer Intern",
-    "start_period": "July 2021",
-    "end_period": "August 2021",
+    "startPeriod": "July 2021",
+    "endPeriod": "August 2021",
     "items": [
       "Developed REST and gRPC Microservices in Golang, involving MySQL, Amazon S3 cloud object storage, and Docker.",
       "Improved DAO layer performance of existing design.",
@@ -40,8 +40,8 @@ const data = {
     "name": "IA-TOKI",
     "location": "Indonesia",
     "position": "Scientific Committee",
-    "start_period": "September 2019",
-    "end_period": "Now",
+    "startPeriod": "September 2019",
+    "endPeriod": "Now",
     "items": [
       "Prepared the delegation of Indonesia in International Olympiad in Informatics (IOI) 2020 in Singapore through its national training camp.",
       "Provided monthly regular open contests through TLX, an online competitive programming judge platform.",
@@ -51,8 +51,8 @@ const data = {
       "name": "COMPFEST",
       "location": "Depok, Indonesia",
       "position": "Person in Charge of Competitive Programming Contest",
-      "start_period": "February 2021",
-      "end_period": "November 2021",
+      "startPeriod": "February 2021",
+      "endPeriod": "November 2021",
       "items": [
         "Prepared online judge microservices involving Nginx, AWS E2, Docker, MySQL, Java, C++, and Ansible.",
         "Prepared problems, test data, and solutions for the coder class, elimination, and final of both IOI-based and ICPC-based programming contest, mirrored in Codeforces, participated by over 3000 teams."

@@ -1,37 +1,39 @@
 import data from "../components/data";
+
 import {Container, Flex, Link} from "@chakra-ui/react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCoffee} from "@fortawesome/free-solid-svg-icons/faCoffee";
-import {faGlobeAsia} from "@fortawesome/free-solid-svg-icons/faGlobeAsia";
-import HeaderItem from "../components/HeaderItem";
-import {faMapMarked} from "@fortawesome/free-solid-svg-icons/faMapMarked";
 import {ExternalLinkIcon} from "@chakra-ui/icons";
+
+import HeaderItem from "../components/HeaderItem";
 import IconHeaderItem from "../components/IconHeaderItem";
+
+import {faGlobeAsia} from "@fortawesome/free-solid-svg-icons/faGlobeAsia";
 import {faPhone} from "@fortawesome/free-solid-svg-icons/faPhone";
+import {faMapMarked} from "@fortawesome/free-solid-svg-icons/faMapMarked";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons/faLinkedin";
-import {faEnvelopeOpenText} from "@fortawesome/free-solid-svg-icons/faEnvelopeOpenText";
 import {faEnvelope} from "@fortawesome/free-regular-svg-icons/faEnvelope";
+import EducationItem from "../components/EducationItem";
+import EmploymentItem from "../components/EmploymentItem";
 
 export default function Home() {
   console.log(data)
   return (
     <Container maxW='container.lg' className={'mt-5 justify-center'}>
       <Flex className={'justify-between'}>
-        <Flex className={'flex-col justify-evenly ml-3'}>
+        <Flex className={'flex-col justify-evenly pl-3'}>
           <div className={'text-lg'}>
             <h1 className={'text-5xl mb-3'}>
-              {data.info.first_name}
+              {data.info.firstName}
               <span className={'font-bold'}>
-              {data.info.bolded_name}
+              {data.info.boldedName}
             </span>
-              {data.info.last_name}
+              {data.info.lastName}
             </h1>
             <h1 className={'text-3xl'}>
               {data.info.caption}
             </h1>
           </div>
         </Flex>
-        <Flex className={'flex-col mr-5 text-lg'}>
+        <Flex className={'flex-col pr-5 text-lg'}>
           <HeaderItem>
             <IconHeaderItem icon={faGlobeAsia}></IconHeaderItem>
             <Link href={data.info.website} isExternal>
@@ -58,17 +60,33 @@ export default function Home() {
               {data.info.linkedin}
             </Link>
           </HeaderItem>
-
           <HeaderItem>
             <IconHeaderItem icon={faEnvelope}></IconHeaderItem>
             <Link href={'mailto:' + data.info.email} isExternal>
-
             {data.info.email}
             </Link>
           </HeaderItem>
         </Flex>
       </Flex>
       <hr className={'border-0 bg-black text-black h-1 mt-2 mb-2'}/>
+      <Flex>
+        <Flex className={'p-2'}>
+          <Flex className={'flex-col'}>
+          <h2 className={'text-2xl'}>Education</h2>
+          {
+            data.education.map(educationItem => (<EducationItem educationItem={educationItem}/>))
+          }
+          </Flex>
+        </Flex>
+        <Flex className={'p-2'}>
+          <Flex className={'flex-col'}>
+          <h2 className={'text-2xl'}>Employment History</h2>
+          {
+            data.employment.map(employmentItem => (<EmploymentItem employmentItem={employmentItem}/>))
+          }
+          </Flex>
+        </Flex>
+      </Flex>
     </Container>
   )
 }
