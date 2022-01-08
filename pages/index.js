@@ -1,213 +1,74 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import data from "../components/data";
+import {Container, Flex, Link} from "@chakra-ui/react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCoffee} from "@fortawesome/free-solid-svg-icons/faCoffee";
+import {faGlobeAsia} from "@fortawesome/free-solid-svg-icons/faGlobeAsia";
+import HeaderItem from "../components/HeaderItem";
+import {faMapMarked} from "@fortawesome/free-solid-svg-icons/faMapMarked";
+import {ExternalLinkIcon} from "@chakra-ui/icons";
+import IconHeaderItem from "../components/IconHeaderItem";
+import {faPhone} from "@fortawesome/free-solid-svg-icons/faPhone";
+import {faLinkedin} from "@fortawesome/free-brands-svg-icons/faLinkedin";
+import {faEnvelopeOpenText} from "@fortawesome/free-solid-svg-icons/faEnvelopeOpenText";
+import {faEnvelope} from "@fortawesome/free-regular-svg-icons/faEnvelope";
 
 export default function Home() {
+  console.log(data)
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Container maxW='container.lg' className={'mt-5 justify-center'}>
+      <Flex className={'justify-between'}>
+        <Flex className={'flex-col justify-evenly ml-3'}>
+          <div className={'text-lg'}>
+            <h1 className={'text-5xl mb-3'}>
+              {data.info.first_name}
+              <span className={'font-bold'}>
+              {data.info.bolded_name}
+            </span>
+              {data.info.last_name}
+            </h1>
+            <h1 className={'text-3xl'}>
+              {data.info.caption}
+            </h1>
+          </div>
+        </Flex>
+        <Flex className={'flex-col mr-5 text-lg'}>
+          <HeaderItem>
+            <IconHeaderItem icon={faGlobeAsia}></IconHeaderItem>
+            <Link href={data.info.website} isExternal>
+              {data.info.website} <ExternalLinkIcon mx='1px'/>
+            </Link>
+          </HeaderItem>
+          <HeaderItem>
+            <IconHeaderItem icon={faMapMarked}></IconHeaderItem>
+            <div>
+              {data.info.location}
+            </div>
+          </HeaderItem>
+          <HeaderItem>
+            <IconHeaderItem icon={faPhone}></IconHeaderItem>
+            <div>
+            <Link href={'tel:' + data.info.phone.replace(/(\s|-)/g, '')} isExternal>
+              {data.info.phone}
+            </Link>
+            </div>
+          </HeaderItem>
+          <HeaderItem>
+            <IconHeaderItem icon={faLinkedin}></IconHeaderItem>
+            <Link href={'https://linkedin.com/in/' + data.info.linkedin} isExternal>
+              {data.info.linkedin}
+            </Link>
+          </HeaderItem>
 
-      <main>
-        <h1 className="title">
-          Read{' '}
-          <Link href="/posts/first-post">
-            <a>this page!</a>
-          </Link>
-        </h1>
+          <HeaderItem>
+            <IconHeaderItem icon={faEnvelope}></IconHeaderItem>
+            <Link href={'mailto:' + data.info.email} isExternal>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+            {data.info.email}
+            </Link>
+          </HeaderItem>
+        </Flex>
+      </Flex>
+      <hr className={'border-0 bg-black text-black h-1 mt-2 mb-2'}/>
+    </Container>
   )
 }

@@ -1,12 +1,13 @@
-{
+const data = {
   "info": {
-    "name": "Hocky Yudhiono",
+    "first_name":"",
+    "bolded_name": "Hocky",
+    "last_name": " Yudhiono",
+    "caption":"Software Engineer",
     "website": "https://hockyy.com",
     "bolded": 0,
-    "city": "Pontianak",
-    "country": "Indonesia",
-    "country_code": "+62",
-    "phone": "818-0724-0802",
+    "location": "Pontianak, Indonesia",
+    "phone": "+62 818-0724-0802",
     "linkedin": "hocky",
     "email": "hocky.yudhiono@gmail.com"
   },
@@ -111,3 +112,5 @@
     }
   ]
 }
+
+export default data
