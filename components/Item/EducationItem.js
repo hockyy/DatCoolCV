@@ -1,5 +1,5 @@
 import {Flex} from "@chakra-ui/react";
-import UnorderedList from "./UnorderedList";
+import UnorderedList from "../UnorderedList";
 
 const EducationItem = ({educationItem}) => {
   return (
@@ -16,7 +16,7 @@ const EducationItem = ({educationItem}) => {
       </p>
       <UnorderedList>
         {
-          educationItem.items.map((item) => (<li>{item}</li>))
+          educationItem.items.map((item,idx) => (<li key={idx}>{item}</li>))
         }
       </UnorderedList>
     </Flex>

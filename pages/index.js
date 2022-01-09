@@ -11,18 +11,17 @@ import {faPhone} from "@fortawesome/free-solid-svg-icons/faPhone";
 import {faMapMarked} from "@fortawesome/free-solid-svg-icons/faMapMarked";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import {faEnvelope} from "@fortawesome/free-regular-svg-icons/faEnvelope";
-import EducationItem from "../components/EducationItem";
-import EmploymentItem from "../components/EmploymentItem";
-import SkillItem from "../components/SkillItem";
+import EducationItem from "../components/Item/EducationItem";
+import EmploymentItem from "../components/Item/EmploymentItem";
+import SkillItem from "../components/Item/SkillItem";
 import UnorderedList from "../components/UnorderedList";
-import LanguageItem from "../components/LanguageItem";
+import LanguageItem from "../components/Item/LanguageItem";
 import SectionContainer from "../components/SectionContainer";
-import AchievementItem from "../components/AchievementItem";
-import ExperienceItem from "../components/ExperienceItem";
+import AchievementItem from "../components/Item/AchievementItem";
+import ExperienceItem from "../components/Item/ExperienceItem";
 import Head from 'next/head'
 
 export default function Home() {
-  console.log(data)
   return (
     <div>
       <Head>
@@ -89,14 +88,14 @@ export default function Home() {
             <SectionContainer>
               <h2 className={'text-2xl'}>Education</h2>
               {
-                data.education.map(educationItem => (<EducationItem educationItem={educationItem}/>))
+                data.education.map((educationItem, idx) => (<EducationItem educationItem={educationItem} key={idx}/>))
               }
             </SectionContainer>
 
             <SectionContainer>
               <h2 className={'text-2xl'}>Employment History</h2>
               {
-                data.employment.map(employmentItem => (<EmploymentItem employmentItem={employmentItem}/>))
+                data.employment.map((employmentItem, idx) => (<EmploymentItem employmentItem={employmentItem} key={idx}/>))
               }
             </SectionContainer>
           </Flex>
@@ -106,7 +105,7 @@ export default function Home() {
               <h2 className={'text-2xl'}>Professional Skills</h2>
               <UnorderedList>
                 {
-                  data.skills.map(skillItem => (<SkillItem skillItem={skillItem}/>))
+                  data.skills.map((skillItem,idx) => (<SkillItem skillItem={skillItem} key={idx}/>))
                 }
               </UnorderedList>
             </SectionContainer>
@@ -115,7 +114,7 @@ export default function Home() {
               <h2 className={'text-2xl'}>Languages</h2>
               <UnorderedList>
                 {
-                  data.languages.map(languageItem => (<LanguageItem languageItem={languageItem}/>))
+                  data.languages.map((languageItem, idx) => (<LanguageItem languageItem={languageItem}  key={idx}/>))
                 }
               </UnorderedList>
             </SectionContainer>
@@ -125,7 +124,7 @@ export default function Home() {
               <h2 className={'text-2xl'}>Achievements</h2>
               <UnorderedList>
                 {
-                  data.achievements.map(achievementItem => (<AchievementItem achievementItem={achievementItem}/>))
+                  data.achievements.map((achievementItem, idx) => (<AchievementItem achievementItem={achievementItem} key={idx}/>))
                 }
               </UnorderedList>
             </SectionContainer>
@@ -135,7 +134,7 @@ export default function Home() {
               <h2 className={'text-2xl'}>Relevant Experiences</h2>
               <UnorderedList>
                 {
-                  data.others.map(experienceItem => (<ExperienceItem experienceItem={experienceItem}/>))
+                  data.others.map((experienceItem, idx) => (<ExperienceItem experienceItem={experienceItem} key={idx}/>))
                 }
               </UnorderedList>
             </SectionContainer>

@@ -1,5 +1,5 @@
-const AchievementItem = ({children, achievementItem}) => (
-  <li>
+const AchievementItem = ({children, achievementItem, key}) => (
+  <li key={key}>
     {achievementItem.name}
     <span className={'italic'}>
       {', ' + achievementItem.date}
