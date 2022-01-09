@@ -1,7 +1,7 @@
 import {Flex} from "@chakra-ui/react";
 import UnorderedList from "../UnorderedList";
 
-const EducationItem = ({employmentItem, key}) => {
+const EducationItem = ({employmentItem}) => {
   return (
     <Flex className={'flex-col mt-2 mb-2'}>
       <h3 className={'text-lg'}>

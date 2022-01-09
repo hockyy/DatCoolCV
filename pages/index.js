@@ -88,14 +88,14 @@ export default function Home() {
             <SectionContainer>
               <h2 className={'text-2xl'}>Education</h2>
               {
-                data.education.map((educationItem, idx) => (<EducationItem educationItem={educationItem} key={idx}/>))
+                data.education.map((educationItem) => (<EducationItem educationItem={educationItem}/>))
               }
             </SectionContainer>
 
             <SectionContainer>
               <h2 className={'text-2xl'}>Employment History</h2>
               {
-                data.employment.map((employmentItem, idx) => (<EmploymentItem employmentItem={employmentItem} key={idx}/>))
+                data.employment.map((employmentItem) => (<EmploymentItem employmentItem={employmentItem}/>))
               }
             </SectionContainer>
           </Flex>
