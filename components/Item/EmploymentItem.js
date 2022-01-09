@@ -19,7 +19,7 @@ const EducationItem = ({employmentItem}) => {
       </p>
       <UnorderedList>
         {
-          employmentItem.items.map((item, idx)=>(<li key={idx}>{item}</li>))
+          employmentItem.items.map((item, idx)=>(<li key={idx.toString()}>{item}</li>))
         }
       </UnorderedList>
     </Flex>

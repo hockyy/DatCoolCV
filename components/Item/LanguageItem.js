@@ -1,5 +1,5 @@
-const LanguageItem = ({children, languageItem, key}) => (
-  <li key={key}>
+const LanguageItem = ({children, languageItem}) => (
+  <li>
     <span className={'font-bold'}>
     {languageItem.name}
     </span> {languageItem.desc ? ('(' + languageItem.desc + ')') : ''}

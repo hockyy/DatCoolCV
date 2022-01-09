@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <meta charset="UTF-8"/>
         <title>Hocky Yudhiono's CV</title>
+        <meta charSet="UTF-8"/>
         <meta name="keywords" content="CV, Resume, Hocky, Yudhiono, About"/>
         <meta name="author" content="Hocky"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -84,24 +84,24 @@ export default function Home() {
         </Flex>
         <hr className={'border-0 bg-black text-black h-1 mt-2 mb-2'}/>
         <Flex className={'flex-col lg:flex-row'}>
-          <Flex className={'p-2 flex-col'}>
-            <SectionContainer>
+          <Flex className={'p-2 flex-col'} key ='left'>
+            <SectionContainer key='education'>
               <h2 className={'text-2xl'}>Education</h2>
               {
-                data.education.map((educationItem) => (<EducationItem educationItem={educationItem}/>))
+                data.education.map((educationItem, idx) => (<EducationItem key={idx} educationItem={educationItem}/>))
               }
             </SectionContainer>
 
-            <SectionContainer>
+            <SectionContainer key={'employment'}>
               <h2 className={'text-2xl'}>Employment History</h2>
               {
-                data.employment.map((employmentItem) => (<EmploymentItem employmentItem={employmentItem}/>))
+                data.employment.map((employmentItem, idx) => (<EmploymentItem key={idx} employmentItem={employmentItem}/>))
               }
             </SectionContainer>
           </Flex>
-          <Flex className={'p-2 flex-col'}>
+          <Flex className={'p-2 flex-col'} key={'right'}>
 
-            <SectionContainer>
+            <SectionContainer key={'skills'}>
               <h2 className={'text-2xl'}>Professional Skills</h2>
               <UnorderedList>
                 {
@@ -110,7 +110,7 @@ export default function Home() {
               </UnorderedList>
             </SectionContainer>
 
-            <SectionContainer>
+            <SectionContainer key={'languages'}>
               <h2 className={'text-2xl'}>Languages</h2>
               <UnorderedList>
                 {
@@ -120,7 +120,7 @@ export default function Home() {
             </SectionContainer>
 
 
-            <SectionContainer>
+            <SectionContainer key={'achievements'}>
               <h2 className={'text-2xl'}>Achievements</h2>
               <UnorderedList>
                 {
@@ -130,7 +130,7 @@ export default function Home() {
             </SectionContainer>
 
 
-            <SectionContainer>
+            <SectionContainer key={'experiences'}>
               <h2 className={'text-2xl'}>Relevant Experiences</h2>
               <UnorderedList>
                 {

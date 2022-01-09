@@ -1,6 +1,6 @@
 import {Flex} from "@chakra-ui/react";
 
-const SectionContainer = ({children, key}) => (
+const SectionContainer = ({children}) => (
   <Flex className={'mt-1 flex-col'}>
     {children}
   </Flex>

@@ -1,11 +1,13 @@
-const AchievementItem = ({children, achievementItem, key}) => (
-  <li key={key}>
-    {achievementItem.name}
-    <span className={'italic'}>
+const AchievementItem = ({children, achievementItem}) => {
+  return (
+    <li>
+      {achievementItem.name}
+      <span className={'italic'}>
       {', ' + achievementItem.date}
     </span>
-    {', ' + achievementItem.issuer}
-  </li>
-)
+      {', ' + achievementItem.issuer}
+    </li>
+  )
+}
 
 export default AchievementItem;

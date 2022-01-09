@@ -1,5 +1,5 @@
-const SkillItem = ({children, skillItem, key}) => (
-  <li key={key}>
+const SkillItem = ({children, skillItem}) => (
+  <li>
     <span className={'font-bold'}>
     {skillItem.name}
     </span> {skillItem.desc ? ('(' + skillItem.desc + ')') : ''}
