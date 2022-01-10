@@ -20,6 +20,7 @@ import SectionContainer from "../components/SectionContainer";
 import AchievementItem from "../components/Item/AchievementItem";
 import ExperienceItem from "../components/Item/ExperienceItem";
 import Head from 'next/head'
+import UnorderedListSmall from "../components/UnorderedListSmall";
 
 export default function Home() {
   return (
@@ -84,7 +85,7 @@ export default function Home() {
         </Flex>
         <hr className={'border-0 bg-black text-black h-1 mt-2 mb-2'}/>
         <Flex className={'flex-col lg:flex-row'}>
-          <Flex className={'p-2 flex-col'} key ='left'>
+          <Flex className={'p-2 flex-col lg:w-6/12'} key ='left'>
             <SectionContainer key='education'>
               <h2 className={'text-2xl'}>Education</h2>
               {
@@ -99,7 +100,7 @@ export default function Home() {
               }
             </SectionContainer>
           </Flex>
-          <Flex className={'p-2 flex-col'} key={'right'}>
+          <Flex className={'p-2 flex-col lg:w-6/12'} key={'right'}>
 
             <SectionContainer key={'skills'}>
               <h2 className={'text-2xl'}>Professional Skills</h2>
@@ -122,11 +123,11 @@ export default function Home() {
 
             <SectionContainer key={'achievements'}>
               <h2 className={'text-2xl'}>Achievements</h2>
-              <UnorderedList>
+              <UnorderedListSmall>
                 {
                   data.achievements.map((achievementItem, idx) => (<AchievementItem achievementItem={achievementItem} key={idx}/>))
                 }
-              </UnorderedList>
+              </UnorderedListSmall>
             </SectionContainer>
 
 

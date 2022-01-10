@@ -1,7 +1,9 @@
-const UnorderedList = ({children}) => (
-  <ul className={"list-disc ml-10 mt-2"}>
-    {children}
-  </ul>
-)
+const UnorderedList = ({children}) => {
+  return (
+    <ul className={"list-disc mt-2 ml-10"}>
+      {children}
+    </ul>
+  )
+}
 
 export default UnorderedList;

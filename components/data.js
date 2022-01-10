@@ -74,7 +74,7 @@ const data = {
     },
     {
       "name": "Other Technologies",
-      "desc": "Git, Selenium, Docker, Ansible, PostgreSQL, MySQL, Flask"
+      "desc": "Git, Selenium, Docker, Ansible, PostgreSQL, MySQL, Flask, Nginx, Cloud Computing"
     }
   ],
   "languages": [
@@ -89,26 +89,76 @@ const data = {
   ],
   "achievements": [
     {
-      "bullet": "silver",
-      "name": "Second Winner of Arkavidia 7.0 Competitive Programming Competition",
-      "date": "February 2021",
-      "issuer": "Bandung Institute of Technology"
+      "medal": "gold",
+      "name": "Best National and Fourth Winner of The 2021 ICPC Asia Jakarta Regional Contest",
+      "date": "November 2021",
+      "issuer": "ICPC Foundation"
     },
     {
-      "bullet": "bronze",
+      "medal": "gold",
+      "name": "Champion of The 2021 Indonesia National Contest (INC)",
+      "date": "October 2021",
+      "issuer": "ICPC Foundation"
+    },
+    {
+      "medal": "silver",
+      "name": "Silver Medalist of GEMASTIK Programming Competition",
+      "date": "October 2021",
+      "issuer": "Ministry of Education and Culture of Indonesia"
+    },
+    {
+      "medal": "bronze",
       "name": "Bronze Medalist of 2020 ICPC Asia Jakarta Regional Contest",
       "date": "December 2020",
       "issuer": "ICPC Foundation"
+    },
+    {
+      "medal": "bronze",
+      "name": "Third Winner of the 2019 ICPC Asia Kuala Lumpur Regional Contest",
+      "date": "November 2019",
+      "issuer": "ICPC Foundation"
+    },
+    {
+      "medal": "gold",
+      "name": "National Gold Medalist of the 2019 ICPC Asia Jakarta Regional Contest",
+      "date": "October 2020",
+      "issuer": "ICPC Foundation"
+    },
+    {
+      "medal": "silver",
+      "name": "Silver Medalist of APIO (Asia-Pacific Informatics Olympiad)",
+      "date": "May 2019",
+      "issuer": "Innopolis University"
+    },
+    {
+      "medal": "bronze",
+      "name": "Third Winner of Ngoding Seru Programming Competition",
+      "date": "April 2019",
+      "issuer": "IA-TOKI"
+    },
+    {
+      "medal": "gold",
+      "name": "Gold Medalist of NOI (National Olympiad of Informatics) of Singapore",
+      "date": "March 2019",
+      "issuer": "Ministry of Education of Singapore"
     }
   ],
   "others": [
     {
       "name": {
         "logo": "gitlab",
-        "url": "https://gitlab.com/hocky/pacilmate",
+        "url": "https://gitlab.com/pacilmate/pacilmate",
         "name": "Pacilmate"
       },
       "desc": "Team lead of a Rest API based final project, a utility Discord™ bot. Involving Java, Spring, PostgreSQL, JDA Framework, and Gitlab CI."
+    },
+    {
+      "name": {
+        "logo": "gitlab",
+        "url": "https://gitlab.com/uimatedev/uimate-2",
+        "name": "UImate"
+      },
+      "desc": "Team lead of a web developing course final project, students gathering platform. Involving Django, jQuery, PostgreSQL, and Gitlab CI."
     }
   ]
 }
