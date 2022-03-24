@@ -33,8 +33,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
       <Container maxW='container.lg' className={'mt-5 justify-center'}>
-        <Flex className={'justify-between flex-col lg:flex-row'}>
-          <Flex className={'flex-col lg:justify-evenly lg:pl-3 items-center lg:items-start text-center lg:text-left'}>
+        <Flex className={'justify-between flex-col md:flex-row'}>
+          <Flex className={'flex-col md:justify-evenly md:pl-3 items-center md:items-start text-center md:text-left'}>
             <div className={'text-lg mb-3'}>
               <h1 className={'mb-3 text-4xl'}>
                 {data.info.firstName}
@@ -48,7 +48,7 @@ export default function Home() {
               </h1>
             </div>
           </Flex>
-          <Flex className={'flex-col pr-5 text-lg content-center items-center lg:items-start justify-center'}>
+          <Flex className={'flex-col pr-5 text-lg content-center items-center md:items-start justify-center'}>
             <HeaderItem>
               <IconHeaderItem icon={faGlobeAsia}></IconHeaderItem>
               <Link href={data.info.website} isExternal>
@@ -84,8 +84,8 @@ export default function Home() {
           </Flex>
         </Flex>
         <hr className={'border-0 bg-black text-black h-1 mt-2 mb-2'}/>
-        <Flex className={'flex-col lg:flex-row'}>
-          <Flex className={'p-2 flex-col lg:w-6/12'} key ='left'>
+        <Flex className={'flex-col md:flex-row'}>
+          <Flex className={'p-2 flex-col md:w-6/12'} key ='left'>
             <SectionContainer key='education'>
               <h2 className={'text-2xl'}>Education</h2>
               {
@@ -100,7 +100,7 @@ export default function Home() {
               }
             </SectionContainer>
           </Flex>
-          <Flex className={'p-2 flex-col lg:w-6/12'} key={'right'}>
+          <Flex className={'p-2 flex-col md:w-6/12'} key={'right'}>
 
             <SectionContainer key={'skills'}>
               <h2 className={'text-2xl'}>Professional Skills</h2>
