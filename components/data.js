@@ -4,7 +4,7 @@ const data = {
     "boldedName": "Hocky",
     "lastName": " Yudhiono",
     "caption":"Software Engineer",
-    "website": "https://hockyy.com",
+    "website": "https://hocky.id",
     "bolded": 0,
     "location": "Pontianak, Indonesia",
     "phone": "+62 818-0724-0802",
