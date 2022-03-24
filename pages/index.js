@@ -33,10 +33,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
       <Container maxW='container.lg' className={'mt-5 justify-center'}>
-        <Flex className={'justify-between'}>
-          <Flex className={'flex-col justify-evenly pl-3'}>
-            <div className={'text-lg'}>
-              <h1 className={'text-5xl mb-3'}>
+        <Flex className={'justify-between flex-col lg:flex-row'}>
+          <Flex className={'flex-col lg:justify-evenly lg:pl-3 items-center lg:items-start text-center lg:text-left'}>
+            <div className={'text-lg mb-3'}>
+              <h1 className={'mb-3 text-4xl'}>
                 {data.info.firstName}
                 <span className={'font-bold'}>
               {data.info.boldedName}
@@ -48,7 +48,7 @@ export default function Home() {
               </h1>
             </div>
           </Flex>
-          <Flex className={'flex-col pr-5 text-lg'}>
+          <Flex className={'flex-col pr-5 text-lg content-center items-center lg:items-start justify-center'}>
             <HeaderItem>
               <IconHeaderItem icon={faGlobeAsia}></IconHeaderItem>
               <Link href={data.info.website} isExternal>
